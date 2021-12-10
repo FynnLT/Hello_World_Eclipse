@@ -1,9 +1,9 @@
 package HW8;
 
-public class Hello {
+public class Test {
 
 	public static void main(String[] args) {
-System.out.println("Hllo");
+int s=3;
 	}
 
 }

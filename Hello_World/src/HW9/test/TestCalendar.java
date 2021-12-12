@@ -3,6 +3,7 @@ package HW9.test;
 
 
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
@@ -36,7 +37,15 @@ class TestCalendar {
 		GregorianCalendar c= new GregorianCalendar();
 		assertTrue(c.isLeapYear(year));
 		
+	
+		
 	}
 
 	// Create a new method for boundary testing
+	@ParameterizedTest
+	@ValueSource(ints = {-1,1900,2100,2200,0})
+	public void Should_return_boundaries(int year) {
+		c1 = new Calendar(year);
+		assertFalse(c1.isLeapYear());
+	}
 }

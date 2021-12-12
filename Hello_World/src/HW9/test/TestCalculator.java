@@ -3,10 +3,12 @@ package HW9.test;
 
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
+import org.junit.platform.engine.support.hierarchical.OpenTest4JAwareThrowableCollector;
 
 import HW9.main.Calculator;
 
@@ -41,6 +43,9 @@ class TestCalculator {
 	
 	@Test
 	public void Should_throw_an_arithmetic_exception_if_denominator_is_zero() {
-assertt
+
+		
+		assertThrows(ArithmeticException.class,() -> calculator.divide(4, 0));
+      
 	}
 }

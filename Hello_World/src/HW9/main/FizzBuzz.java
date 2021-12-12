@@ -9,11 +9,11 @@ public class FizzBuzz {
 		if (number%5==0 && number%7!=0) {
 			return "Fizz";
 		}
-		else if (number%3==0 && number%7!=0) {
-			return "buzz";
+		else if (number%5!=0 && number%7==0) {
+			return "Buzz";
 		}
 		else if (number%5==0 && number%7==0) {
-			return "Fizzbuzz";
+			return "FizzBuzz";
 		}
 		else return "";
 	}
